@@ -34,9 +34,9 @@ If you have any questions, please contact the author: [Jiarui Qin](http://jiarui
 - We give a sample raw data in the `data` folder. The full raw datasets are: [Tmall](https://tianchi.aliyun.com/dataset/dataDetail?dataId=42), [Taobao](https://tianchi.aliyun.com/dataset/dataDetail?dataId=649) and [Alipay](https://tianchi.aliyun.com/dataset/dataDetail?dataId=53). **Remove the first line of table head**.
 - Feature Engineering:
 ```
-python3 feateng_tmall.py # for Tmall
-python3 feateng_taobao.py # for Taobao
-python3 feateng_alipay.py # for Alipay
+python3 preprocess_tmall.py # for Tmall
+python3 preprocess_taobao.py # for Taobao
+python3 preprocess_alipay.py # for Alipay
 ```
 
 
