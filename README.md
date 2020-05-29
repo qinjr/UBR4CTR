@@ -1,7 +1,7 @@
 # User Behavior Retrieval for CTR Prediction (UBR4CTR)
 A `tensorflow` implementation of all the compared models for our SIGIR 2020 paper:
 
-[User Behavior Retrieval for Click-Through Rate Prediction](https://arxiv.org/)
+[User Behavior Retrieval for Click-Through Rate Prediction](https://arxiv.org/pdf/2005.14171.pdf)
 
 If you have any questions, please contact the author: [Jiarui Qin](http://jiaruiqin.me).
 
