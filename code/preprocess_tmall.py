@@ -51,8 +51,6 @@ def feateng(joined_raw_file, remap_dict_file, user_feat_dict_file, item_feat_dic
             gid_set.add(gid)
             date_str = '2015' + date_str
             time_int = int(time.mktime(datetime.datetime.strptime(date_str, "%Y%m%d").timetuple()))
-            t_idx = (time_int - START_TIME) // TIME_DELTA
-            time_idxs.append(t_idx)
 
     # remap
     uid_list = list(uid_set)
