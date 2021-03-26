@@ -28,9 +28,9 @@ class UBRBase(object):
         uniform = tf.random_uniform(tf.shape(probs), 0, 1)
         condition = probs - uniform
         self.index = tf.where(condition >= 0, tf.ones_like(probs), tf.zeros_like(probs))
-        log_probs = tf.log(tf.clip_by_value(tf.where(self.index == 1, probs, 1 - probs), 1e-10, 1))
+        log_probs = tf.log(tf.clip_by_value(probs, 1e-10, 1))
 
-        self.loss = -tf.reduce_mean(tf.reduce_sum(log_probs * self.rewards, axis=1))
+        self.loss = -tf.reduce_mean(tf.reduce_sum(log_probs * self.index * self.rewards, axis=1))
         self.reward = tf.reduce_mean(self.rewards)
         tf.summary.scalar('ubr_reward', self.reward)
         self.merged = tf.summary.merge_all()
