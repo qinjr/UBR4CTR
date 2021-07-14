@@ -295,6 +295,9 @@ def gen_target_seq(input_file,
         with open(context_dict_test_file, 'wb') as f:
             pkl.dump(context_dict_test, f)
 
+def insert_elastic(input_file):      
+    writer = ESWriter(input_file, 'tmall')
+    writer.write()            
 
 if __name__ == "__main__":
     join_user_profile(RAW_DIR + 'user_info_format1.csv', RAW_DIR + 'user_log_format1.csv', FEATENG_DIR + 'joined_user_behavior.csv')
