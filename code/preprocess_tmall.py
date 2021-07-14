@@ -298,7 +298,7 @@ def gen_target_seq(input_file,
 
 if __name__ == "__main__":
     join_user_profile(RAW_DIR + 'user_info_format1.csv', RAW_DIR + 'user_log_format1.csv', FEATENG_DIR + 'joined_user_behavior.csv')
-    feateng(FEATENG_DIR + 'joined_user_behavior.csv', FEATENG_DIR + 'remap_dict.pkl', FEATENG_DIR + 'time_distri.png', FEATENG_DIR + 'user_feat_dict.pkl', FEATENG_DIR + 'item_feat_dict.pkl')
+    feateng(FEATENG_DIR + 'joined_user_behavior.csv', FEATENG_DIR + 'remap_dict.pkl', FEATENG_DIR + 'user_feat_dict.pkl', FEATENG_DIR + 'item_feat_dict.pkl')
     remap(FEATENG_DIR + 'joined_user_behavior.csv', FEATENG_DIR + 'remap_dict.pkl', FEATENG_DIR + 'remap_joined_user_behavior.csv')
     sort_log(FEATENG_DIR + 'remap_joined_user_behavior.csv', FEATENG_DIR + 'sorted_remap_joined_user_behavior.csv')
     gen_target_seq(FEATENG_DIR + 'sorted_remap_joined_user_behavior.csv',
